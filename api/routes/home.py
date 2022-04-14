@@ -1,10 +1,10 @@
 # Copyright (c) 2022 Itz-fork
 
 from fastapi import APIRouter
-from ..functions.response import send_response
+from fastapi.responses import RedirectResponse
 
 route = APIRouter()
 
-@route.get("/")
+@route.get("/", include_in_schema=False)
 async def home():
-    return await send_response("API is alive 😘!")
+    return RedirectResponse("/docs")

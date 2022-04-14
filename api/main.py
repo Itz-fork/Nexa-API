@@ -2,6 +2,7 @@
 
 from glob import glob
 from fastapi import FastAPI
+from fastapi.openapi.utils import get_openapi
 from os.path import dirname, join, basename, isfile
 from importlib import import_module, invalidate_caches
 from fastapi.openapi.docs import get_swagger_ui_html, get_redoc_html
@@ -36,3 +37,17 @@ def add_routes():
             print(f"Failed to import route - {i}")
 
 add_routes()
+
+
+# Modifying openapi
+def nx_openapi():
+    op_sch = get_openapi(
+        title="Nexa-APIs 🌊",
+        version="0.2.3",
+        description="Simple API made for fun 😆!",
+        routes=app.routes
+    )
+    app.openapi_schema = op_sch
+    return app.openapi_schema
+
+app.openapi = nx_openapi
