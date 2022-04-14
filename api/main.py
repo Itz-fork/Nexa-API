@@ -14,13 +14,13 @@ app = FastAPI(docs_url=None, redoc_url=None)
 async def over_docs():
     return get_swagger_ui_html(openapi_url="/openapi.json",
     title="Nexa-APIs 🌊 | Swagger",
-    swagger_favicon_url="/favicon.ico")
+    swagger_favicon_url="https://github.com/Itz-fork/Nexa-APIs/raw/master/favicon.ico")
 
 @app.get("/redoc", include_in_schema=False)
 async def over_redoc():
     return get_redoc_html(openapi_url="/openapi.json",
     title="Nexa-APIs 🌊 | Redoc",
-    redoc_favicon_url="/favicon.ico")
+    redoc_favicon_url="https://github.com/Itz-fork/Nexa-APIs/raw/master/favicon.ico")
 
 
 # Importing routes from "routes" dir

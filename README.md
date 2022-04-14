@@ -8,7 +8,7 @@ Simple API made with [Fastapi](https://fastapi.tiangolo.com/) that relys on othe
 - [`reddit`](api/routes/reddit.py) - Search for posts in reddit
 - [`urban dict`](api/routes/urbandict.py) - Search for definitions in urban dict
 - [`wallpapers`](api/routes/wallpapers.py) - Fetch wallpapers from reddit
-- [`translate`](api/routes/translate.py) - Translate text using py-trans library
+- [`translate`](api/routes/translate.py) - Translate text using google translate
 
 
 # Deploy it! 🪐

@@ -8,7 +8,7 @@ from ..config.ud import api_url
 route = APIRouter()
 
 
-@route.get("/ud")
+@route.get("/ud", description="Search for definitions in urban dictionary")
 async def urban_dict(q: str):
     ur = (await req(api_url.format(q)))["list"]
     print(ur)
