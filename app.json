@@ -1,0 +1,14 @@
+{
+    "name": "Nexa-APIs 🌊",
+    "description": "Useless API",
+    "repository": "https://github.com/Itz-fork/Nexa-APIs",
+    "keywords": [
+        "fastapi",
+        "wallpaper api",
+        "reddit api"
+    ],
+    "website": "https://t.me/NexaBotsUpdates",
+    "success_url": "https://t.me/NexaBotsUpdates",
+    "env": {},
+    "builpacks": []
+}
