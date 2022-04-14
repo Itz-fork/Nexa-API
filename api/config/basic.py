@@ -1,6 +1,5 @@
-# Config file for reddit route
+ud_api = "https://api.urbandictionary.com/v0/define?term={}"
 
-# Subreddits which has good wallpapers
 subs = [
     "Animewallpaper",
     "wallpaper",

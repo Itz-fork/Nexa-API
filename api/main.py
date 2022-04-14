@@ -33,7 +33,6 @@ def add_routes():
             im = import_module(f"api.routes.{i}")
             app.include_router(im.route)
         except Exception as e:
-            print(e)
-            print(f"Failed to import {i}")
+            print(f"Failed to import route - {i}")
 
 add_routes()

@@ -32,7 +32,7 @@ Here are somethings to note,
 - You can find config files in [`config`](api/config) directory
 - Reusable functions are located in [`functions`](api/functions) directory
 - You can find routes in [`routes`](api/routes) directory
-- Use [`start script`](start.sh) when running the dev server
+- Use [`start script`](start.sh) when running the dev server (`bash start.sh`)
 
 ## Add new routes 👨‍🎨
 - Create a new file in [`routes`](api/routes) directory (Ex: `myRoute.py`)

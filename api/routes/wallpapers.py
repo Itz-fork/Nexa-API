@@ -1,7 +1,7 @@
 # Copyright (c) 2022 Itz-fork
 
 from fastapi import APIRouter
-from ..config.wall import subs
+from ..config.basic import subs
 from ..functions.reddit import request
 from ..functions.response import send_response
 

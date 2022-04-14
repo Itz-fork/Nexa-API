@@ -3,15 +3,14 @@
 from fastapi import APIRouter
 from ..functions.response import send_response
 from ..functions.http_req import req
-from ..config.ud import api_url
+from ..config.basic import ud_api
 
 route = APIRouter()
 
 
 @route.get("/ud", description="Search for definitions in urban dictionary")
 async def urban_dict(q: str):
-    ur = (await req(api_url.format(q)))["list"]
-    print(ur)
+    ur = (await req(ud_api.format(q)))["list"]
     results = []
     if ur:
         for r in ur:

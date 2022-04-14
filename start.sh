@@ -11,11 +11,12 @@ function checkDepends() {
     is_uvicorn=$(command -v uvicorn &> /dev/null)
     if ! $is_uvicorn ; then
         echo "Uvicorn is not installed 😥"
+        exit
     fi
 }
 
 function main() {
-    echo -e "$White Nexa-APIs 🌊 - Dev Mode (v0.2) $Reset\n\n "
+    echo -e "$White Nexa-APIs 🌊 - Dev Mode (v0.2.1) $Reset\n\n "
     prs "Checking Dependencies 🔎..."
     checkDepends
     prs "All done ✅, Starting..."
