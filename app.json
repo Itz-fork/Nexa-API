@@ -1,5 +1,6 @@
 {
     "name": "Nexa-APIs 🌊",
+    "logo": "https://github.com/Itz-fork/Nexa-APIs/raw/master/favicon.ico",
     "description": "Useless API",
     "repository": "https://github.com/Itz-fork/Nexa-APIs",
     "keywords": [
@@ -10,5 +11,15 @@
     "website": "https://t.me/NexaBotsUpdates",
     "success_url": "https://t.me/NexaBotsUpdates",
     "env": {},
-    "builpacks": []
+    "builpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
 }
