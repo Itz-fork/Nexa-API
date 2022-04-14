@@ -10,6 +10,7 @@ Simple API made with [Fastapi](https://fastapi.tiangolo.com/) that relys on othe
 - [`wallpapers`](api/routes/wallpapers.py) - Fetch wallpapers from reddit
 - [`translate`](api/routes/translate.py) - Translate text using google translate
 - [`password`](api/routes/password.py) - Generates a random password according to the given length
+- [`npm search`](api/routes/npm_search.py) - Search for npm packages
 
 
 # Deploy it! 🪐
@@ -40,7 +41,7 @@ Here are somethings to note,
 - Add this code (Here we add new route named `/test` which returns the text, `Hello from Fastapi, Nexa-APIs 🌊`)
 ```python
 from fastapi import APIRouter
-from functions.response import send_response
+from ..functions.response import send_response
 
 route = APIRouter()
 

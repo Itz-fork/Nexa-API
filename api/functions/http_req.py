@@ -2,7 +2,7 @@
 
 from httpx import AsyncClient
 
-async def req(url, json=True):
+async def fetch(url, json=True):
     async with AsyncClient() as hc:
         r = await hc.get(url)
         if json:

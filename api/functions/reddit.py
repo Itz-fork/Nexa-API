@@ -1,7 +1,7 @@
 # Copyright (c) 2022 - Itz-fork
 
 from re import search
-from .http_req import req
+from .http_req import fetch
 
 async def add(req, arr: list):
     no = 1
@@ -27,9 +27,9 @@ async def request(q: str, subs: list = []):
     data = []
     if subs:
         for s in subs:
-            resp = await req(f"https://www.reddit.com/r/{s}/search.json?q={q}&restrict_sr=1&sr_nsfw=true")
+            resp = await fetch(f"https://www.reddit.com/r/{s}/search.json?q={q}&restrict_sr=1&sr_nsfw=true")
             await add(resp, data)
     else:
-        resp = await req(f"https://www.reddit.com/search.json?q={q}")
+        resp = await fetch(f"https://www.reddit.com/search.json?q={q}")
         await add(resp, data)
     return data

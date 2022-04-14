@@ -43,7 +43,7 @@ add_routes()
 def nx_openapi():
     op_sch = get_openapi(
         title="Nexa-APIs 🌊",
-        version="0.2.3",
+        version="0.2.4",
         description="Simple API made for fun 😆!",
         routes=app.routes
     )
