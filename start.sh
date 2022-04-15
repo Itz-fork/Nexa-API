@@ -16,7 +16,8 @@ function checkDepends() {
 }
 
 function main() {
-    echo -e "$White Nexa-APIs 🌊 - Dev Mode (v0.2.4) $Reset\n\n "
+    clear
+    echo -e "$White Nexa-APIs 🌊 - Dev Mode (v0.2.5) $Reset\n\n "
     prs "Checking Dependencies 🔎..."
     checkDepends
     prs "All done ✅, Starting..."

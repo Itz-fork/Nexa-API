@@ -8,6 +8,6 @@ route = APIRouter()
 
 
 @route.get("/reddit", description="Search for posts in reddit")
-async def reddit(q: str, sub: str = None):
+async def reddit_search(q: str, sub: str = None):
     r = await request(q, sub.split(" ") if sub else [])
     return await send_response(r)

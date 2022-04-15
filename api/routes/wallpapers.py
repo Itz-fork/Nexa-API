@@ -8,7 +8,7 @@ from ..functions.response import send_response
 route = APIRouter()
 
 @route.get("/wallpaper", description="Fetch wallpapers from subreddits")
-async def walpaper(q: str):
+async def walpapers_search(q: str):
     walls = []
     r = await request(q, subs)
     try:

@@ -1,4 +1,5 @@
 fastapi
 uvicorn
 httpx
-git+https://github.com/Itz-fork/py-trans.git
+aiofiles
+python-multipart

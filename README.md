@@ -11,6 +11,7 @@ Simple API made with [Fastapi](https://fastapi.tiangolo.com/) that relys on othe
 - [`translate`](api/routes/translate.py) - Translate text using google translate
 - [`password`](api/routes/password.py) - Generates a random password according to the given length
 - [`npm search`](api/routes/npm_search.py) - Search for npm packages
+- [`storage`](api/routes/storage.py) - Store files on the server [Read more](https://github.com/Itz-fork/Nexa-APIs/wiki/Route:-Storage)
 
 
 # Deploy it! 🪐

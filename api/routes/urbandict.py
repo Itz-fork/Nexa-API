@@ -9,7 +9,7 @@ route = APIRouter()
 
 
 @route.get("/ud", description="Search for definitions in urban dictionary")
-async def urban_dict(q: str):
+async def urban_dict_search(q: str):
     ur = (await fetch(ud_api.format(q)))["list"]
     results = []
     if ur:
