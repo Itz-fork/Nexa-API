@@ -1,6 +1,6 @@
 # Nexa-APIs 🌊
 
-Simple API made with [Fastapi](https://fastapi.tiangolo.com/) that relys on other APIs to fetch data (**wtf?**)
+Simple API made with [Fastapi](https://fastapi.tiangolo.com/)
 
 
 # List of endpoints 🎗️

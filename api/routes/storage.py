@@ -1,28 +1,28 @@
 # Copyright (c) 2022 Itz-fork
 
-from fastapi import APIRouter, UploadFile, File
-from fastapi.responses import FileResponse
 from sys import getsizeof
 from random import sample
 from os.path import splitext, basename
 from aiofiles import open, os
 from secrets import token_urlsafe
+from fastapi import APIRouter, UploadFile, File
+from fastapi.responses import FileResponse
 
 from ..functions.response import send_response
-from ..config.storageConf import path_to, length, limit
+from ..config.storageConf import NX_Strg
 
 
 route = APIRouter()
 
 
-@route.post("/upload")
+@route.post("/upload", tags=["File server"])
 async def upload_file(file: UploadFile = File(...)):
     async def gen_name():
         while True:
             name = "".join([
-                f"{path_to}/",
+                NX_Strg["path_to"],
                 "".join(sample(file.filename, 4)),
-                token_urlsafe(length),
+                token_urlsafe(NX_Strg["length"]),
                 splitext(file.filename)[1]])
             if not await os.path.isfile(name):
                 return name
@@ -31,7 +31,7 @@ async def upload_file(file: UploadFile = File(...)):
     async with open(fn, mode="wb") as pp:
         cnt = await file.read()
         # Checks file size
-        if getsizeof(cnt) > limit:
+        if getsizeof(cnt) > NX_Strg["limit"]:
             return await send_response("File is too damn large!")
         await pp.write(cnt)
     xd = {
@@ -41,9 +41,9 @@ async def upload_file(file: UploadFile = File(...)):
     return await send_response(xd)
 
 
-@route.get("/download/{id}")
+@route.get("/download/{id}", tags=["File server"])
 async def download_file(id: str):
-    fi = f"{path_to}/{id}"
+    fi = NX_Strg["path_to"] + id
 
     if not await os.path.isfile(fi):
         return await send_response("File not found 🗑️!", 404)
@@ -51,9 +51,9 @@ async def download_file(id: str):
     return FileResponse(fi)
 
 
-@route.delete("/delete/{id}")
+@route.delete("/delete/{id}", tags=["File server"])
 async def delete_file(id: str):
-    fi = f"{path_to}/{id}"
+    fi = NX_Strg["path_to"] + id
 
     if not await os.path.isfile(fi):
         return await send_response("File not found 🗑️!", 404)
