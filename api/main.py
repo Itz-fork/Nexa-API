@@ -9,7 +9,7 @@ from fastapi import FastAPI
 from fastapi.openapi.utils import get_openapi
 from fastapi.openapi.docs import get_swagger_ui_html, get_redoc_html
 
-from .config.storageConf import path_to
+from .config.storageConf import NX_Strg
 from .config.apiConf import NX_Conf
 
 
@@ -22,8 +22,8 @@ app = FastAPI(
 class Start():
     def __init__(self) -> None:
         # Create upload dir if not exists
-        if not isdir(path_to):
-            makedirs(path_to)
+        if not isdir(NX_Strg["path_to"]):
+            makedirs(NX_Strg["path_to"])
         # Importing routes from "routes" dir
         self.add_routes()
         # Customizing the openapi
@@ -37,7 +37,6 @@ class Start():
             try:
                 invalidate_caches()
                 im = import_module(f"api.routes.{i}")
-                print(i)
                 app.include_router(im.route)
             except Exception as e:
                 print(f"Failed to import route - {i}")

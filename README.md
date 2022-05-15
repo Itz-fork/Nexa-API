@@ -21,7 +21,7 @@ Simple API made with [Fastapi](https://fastapi.tiangolo.com/)
 git clone https://github.com/Itz-fork/Nexa-APIs
 cd Nexa-APIs
 pip3 install -r requirements.txt
-uvicorn api.main:app
+bash start.sh
 ```
 
 ### Heroku ☁️
@@ -50,9 +50,9 @@ route = APIRouter()
 async def test_route():
     return await send_response("Hello from Fastapi, Nexa-APIs 🌊")
 ```
-- Run the API
+- Start the development server
 ```sh
-bash start.sh
+bash start.sh dev
 ```
 
 
