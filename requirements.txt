@@ -3,3 +3,4 @@ uvicorn
 httpx
 aiofiles
 python-multipart
+PyDictionary
