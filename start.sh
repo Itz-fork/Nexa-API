@@ -1,5 +1,8 @@
 #! /usr/bin/bash
 
+# Varialbles
+Version="0.2.7"
+
 White="\033[1;37m"
 Red="\033[1;31m"
 Reset="\033[0m"
@@ -34,7 +37,7 @@ function main() {
     clear
 
     if [ "$1" == dev ] ; then
-        echo -e "$White Nexa-APIs 🌊 - Dev Mode (v0.2.5) $Reset\n\n "
+        echo -e "$White Nexa-APIs 🌊 - Dev Mode ($Version) $Reset\n\n "
         case "$2" in
             -u|--update)
                 pip3 install -U -r requirements.txt; shift ;;
@@ -44,7 +47,7 @@ function main() {
             error "$2"
         esac
     else
-        echo -e "$White Nexa-APIs 🌊 - v0.2.5 $Reset\n\n "
+        echo -e "$White Nexa-APIs 🌊 - $Version $Reset\n\n "
     fi
 
     prs "Checking Dependencies 🔎..."

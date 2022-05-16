@@ -8,9 +8,10 @@ Simple API made with [Fastapi](https://fastapi.tiangolo.com/)
 - [`reddit`](api/routes/reddit.py) - Search for posts in reddit
 - [`urban dict`](api/routes/urbandict.py) - Search for definitions in urban dict
 - [`wallpapers`](api/routes/wallpapers.py) - Fetch wallpapers from reddit
-- [`translate`](api/routes/translate.py) - Translate text using google translate
-- [`password`](api/routes/password.py) - Generates a random password according to the given length
 - [`npm search`](api/routes/npm_search.py) - Search for npm packages
+- [`translate`](api/routes/translate.py) - Translate text using google translate
+- [`define`](api/routes/define.py) - Get the definition of a word
+- [`password`](api/routes/password.py) - Generates a random password according to the given length
 - [`storage`](api/routes/storage.py) - Store files on the server [Read more](https://github.com/Itz-fork/Nexa-APIs/wiki/Route:-Storage)
 
 
@@ -48,7 +49,7 @@ route = APIRouter()
 
 @route.get("/test")
 async def test_route():
-    return await send_response("Hello from Fastapi, Nexa-APIs 🌊")
+    return await send_response("Hello from Nexa-APIs 🌊")
 ```
 - Start the development server
 ```sh
