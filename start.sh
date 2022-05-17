@@ -26,7 +26,7 @@ function checkDepends() {
 }
 
 function startServer() {
-    if [ "$1" == dev ] ; then
+    if [ "$1" == true ] ; then
         uvicorn api.main:app --reload
     else
         uvicorn api.main:app
@@ -35,8 +35,9 @@ function startServer() {
 
 function main() {
     clear
-
+    isDev=false
     if [ "$1" == dev ] ; then
+        isDev=true
         echo -e "$White Nexa-APIs 🌊 - Dev Mode ($Version) $Reset\n\n "
         case "$2" in
             -u|--update)
@@ -54,7 +55,7 @@ function main() {
     checkDepends
     prs "All done ✅"
     prs "Starting the server 📡..."
-    startServer "$1"
+    startServer $isDev
 }
 
 main "$1" "$2"
