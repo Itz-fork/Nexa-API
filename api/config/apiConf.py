@@ -3,7 +3,7 @@ NX_Conf = {
     # Metadata for api
     "title": "Nexa-APIs 🌊",
     "description": "Yet another api made for fun 😐!",
-    "version": "0.2.7",
+    "version": "0.2.8",
 
     # Home route
     "home_redirect": True,
