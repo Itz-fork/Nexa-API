@@ -9,13 +9,14 @@ Simple API made with [Fastapi](https://fastapi.tiangolo.com/)
 - [`urban dict`](api/routes/urbandict.py) - Search for definitions in urban dict
 - [`wallpapers`](api/routes/wallpapers.py) - Fetch wallpapers from reddit
 - [`npm search`](api/routes/npm_search.py) - Search for npm packages
-- [`translate`](api/routes/translate.py) - Translate text using google translate
+- [`acronym`](api/routes/acronyms.py) - Get the meaning of an acronym
 - [`define`](api/routes/define.py) - Get the definition of a word
+- [`translate`](api/routes/translate.py) - Translate text using google translate
 - [`password`](api/routes/password.py) - Generates a random password according to the given length
 - [`storage`](api/routes/storage.py) - Store files on the server [Read more](https://github.com/Itz-fork/Nexa-APIs/wiki/Route:-Storage)
 
 
-# Deploy it! 🪐
+# Deploy it! 🚀
 
 ### Locally 💻,
 ```sh
