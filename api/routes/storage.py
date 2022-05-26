@@ -29,7 +29,7 @@ async def upload_file(file: UploadFile = File(...)):
 
     fn = await gen_name()
     async with open(fn, mode="wb") as pp:
-        cnt = await file.read(1024 * 10)
+        cnt = await file.read()
         # Checks file size
         if getsizeof(cnt) > NX_Strg["limit"]:
             return await send_response("File is too large!", 413)

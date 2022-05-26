@@ -5,8 +5,8 @@ NX_Basic = {
     # Subreddits for wallpaper api
     "subs": [
         "Animewallpaper",
-        "wallpaper",
         "wallpapers",
+        "wallpaper",
         "wallpaperdump",
         "iWallpaper"
     ],
