@@ -6,20 +6,19 @@ from asyncio import AbstractEventLoop, get_running_loop
 
 async def run_async(func, *args, loop: AbstractEventLoop = None, exec=None):
     """
-    ## Huh?
     Run synchronous functions in a non-blocking coroutine
 
-    ## Arguments
+    ### Arguments
 
         Required:
 
-            `func` (type: function) - Function that you want to execute
-            `*args` (type: Any) - Arguments
+            `func` : function - Function that you want to execute
+            `*args` : Any - Arguments
 
         Optional:
 
-            `loop` (type: AbstractEventLoop) - An event loop
-            `exec` (type: Any) - Executor
+            `loop` : AbstractEventLoop - An event loop
+            `exec` : Any - Executor
 
     """
     if not loop:
