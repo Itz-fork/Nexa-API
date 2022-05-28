@@ -12,7 +12,7 @@ async def add(req, arr: list):
             p_data["subreddit"] = chl["data"]["subreddit_name_prefixed"]
             p_data["title"] = chl["data"]["title"]
             p_data["author"] = chl["data"]["author"]
-            p_data["post_link"] = chl["data"]["permalink"]
+            p_data["post_link"] = "https://www.reddit.com{}".format(chl["data"]["permalink"])
             if search(r'\bredd.it\b', chl["data"]["url"]):
                 p_data["image"] = chl["data"]["url"]
             else:

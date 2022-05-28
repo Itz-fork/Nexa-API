@@ -16,7 +16,8 @@ from .config.apiConf import NX_Conf
 app = FastAPI(
     docs_url=None,
     redoc_url=None,
-    openapi_tags=NX_Conf["tags"])
+    openapi_tags=NX_Conf["tags"],
+    swagger_ui_parameters={"defaultModelsExpandDepth": -1})
 
 
 class Start():
