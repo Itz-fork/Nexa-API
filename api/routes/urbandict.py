@@ -3,12 +3,19 @@
 from fastapi import APIRouter
 from ..functions.response import send_response
 from ..functions.http_req import fetch
+
 from ..config.basic import NX_Basic
+from ..models.Search import UrbanDictModel
+
 
 route = APIRouter()
 
 
-@route.get("/ud", description="Search for definitions in urban dictionary", tags=["Search"])
+@route.get(
+    "/ud",
+    description="Search for definitions in urban dictionary",
+    response_model=UrbanDictModel,
+    tags=["Search"])
 async def urban_dict_search(q: str):
     ur = (await fetch(NX_Basic["ud_api"].format(q)))["list"]
     results = []

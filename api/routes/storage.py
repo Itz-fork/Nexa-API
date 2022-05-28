@@ -10,12 +10,17 @@ from fastapi.responses import FileResponse
 
 from ..functions.response import send_response
 from ..config.storageConf import NX_Strg
+from ..models.FileServer import UploadModel, DownloadModel, DeleteModel
 
 
 route = APIRouter()
 
 
-@route.post("/upload", description="Upload a file to the server", tags=["File server"])
+@route.post(
+    "/upload",
+    description="Upload a file to the server",
+    response_model=UploadModel,
+    tags=["File server"])
 async def upload_file(file: UploadFile = File(...)):
     async def gen_name():
         while True:
@@ -41,7 +46,11 @@ async def upload_file(file: UploadFile = File(...)):
     return await send_response(xd)
 
 
-@route.get("/download/{id}", description="Download an uploaded file from the server", tags=["File server"])
+@route.get(
+    "/download/{id}",
+    description="Download an uploaded file from the server",
+    response_model=DownloadModel,
+    tags=["File server"])
 async def download_file(id: str):
     fi = NX_Strg["path_to"] + id
 
@@ -51,7 +60,11 @@ async def download_file(id: str):
     return FileResponse(fi)
 
 
-@route.delete("/delete/{id}", description="Delete an uploaded file from the server", tags=["File server"])
+@route.delete(
+    "/delete/{id}",
+    description="Delete an uploaded file from the server",
+    response_model=DeleteModel,
+    tags=["File server"])
 async def delete_file(id: str):
     fi = NX_Strg["path_to"] + id
 

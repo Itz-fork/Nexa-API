@@ -1,14 +1,19 @@
 # Copyright (c) 2022 Itz-fork
 
 from fastapi import APIRouter
-from ..config.basic import NX_Basic
 from ..functions.http_req import fetch
 from ..functions.response import send_response
+from ..config.basic import NX_Basic
+from ..models.Search import NpmModel
 
 route = APIRouter()
 
 
-@route.get("/npm", description="Search for npm packages", tags=["Search"])
+@route.get(
+    "/npm",
+    description="Search for npm packages",
+    response_model=NpmModel,
+    tags=["Search"])
 async def npm_search(q: str):
     resp = await fetch(NX_Basic["npm_api"].format(q))
     packages = []

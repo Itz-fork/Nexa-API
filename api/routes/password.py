@@ -6,12 +6,17 @@ from string import punctuation
 from secrets import token_urlsafe
 
 from ..functions.response import send_response
+from ..models.Tools import PasswordModel
 from ..config.basic import NX_Basic
 
 route = APIRouter()
 
 
-@route.get("/password", description="Generates a random password according to the given length", tags=["Tools"])
+@route.get(
+    "/password",
+    description="Generates a random password according to the given length",
+    response_model=PasswordModel,
+    tags=["Tools"])
 async def password_generator(length: int = 12):
     if length > NX_Basic["pass_limit"]:
         return await send_response(500, [])

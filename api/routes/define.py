@@ -3,6 +3,7 @@
 from fastapi import APIRouter
 from PyDictionary import PyDictionary
 
+from ..models.Languages import DefineModel
 from ..functions.asyncnx import run_async
 from ..functions.response import send_response
 
@@ -21,7 +22,11 @@ def define(word):
             result["definition"] = v
     return result
 
-@route.get("/define", description="Get the definition of a word", tags=["Language"])
+@route.get(
+    "/define",
+    description="Get the definition of a word",
+    response_model=DefineModel,
+    tags=["Language"])
 async def define_word(word: str):
     x = await run_async(define, word)
     return await send_response(x)

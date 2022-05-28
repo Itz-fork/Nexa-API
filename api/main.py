@@ -16,8 +16,7 @@ from .config.apiConf import NX_Conf
 app = FastAPI(
     docs_url=None,
     redoc_url=None,
-    openapi_tags=NX_Conf["tags"],
-    swagger_ui_parameters={"defaultModelsExpandDepth": -1})
+    openapi_tags=NX_Conf["tags"])
 
 
 class Start():
@@ -40,7 +39,7 @@ class Start():
                 im = import_module(f"api.routes.{i}")
                 app.include_router(im.route)
             except Exception as e:
-                print(f"Failed to import route - {i}")
+                print(f"Failed import \n\nRoute: {i} \nReason: {e} \n")
 
     def nx_openapi(self):
         op_sch = get_openapi(
@@ -61,6 +60,10 @@ Start()
 async def over_docs():
     return get_swagger_ui_html(openapi_url="/openapi.json",
                                title="Nexa-APIs 🌊 | Swagger",
+                               swagger_ui_parameters={
+                                   "defaultModelsExpandDepth": -1,
+                                   "syntaxHighlight.theme": "tomorrow-night"
+                               },
                                swagger_favicon_url="https://github.com/Itz-fork/Nexa-APIs/raw/master/favicon.ico")
 
 
