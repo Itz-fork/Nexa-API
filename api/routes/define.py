@@ -1,4 +1,4 @@
-# Copyright (c) 2022 Itz-fork
+# Copyright (c) 2022 - Itz-fork
 
 from fastapi import APIRouter
 from PyDictionary import PyDictionary

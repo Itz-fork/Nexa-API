@@ -21,7 +21,7 @@ Visit the API playground [here](/docs)
 
     # Home route
     "home_redirect": True,
-    "redirect_to": "/redoc",
+    "redirect_to": "/docs",
 
     # Metadata for tags
     "tags": [

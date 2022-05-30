@@ -1,4 +1,4 @@
-# Copyright (c) 2022 Itz-fork
+# Copyright (c) 2022 - Itz-fork
 
 from functools import partial
 from asyncio import AbstractEventLoop, get_running_loop

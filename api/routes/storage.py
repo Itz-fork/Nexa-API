@@ -1,14 +1,13 @@
-# Copyright (c) 2022 Itz-fork
+# Copyright (c) 2022 - Itz-fork
 
-from sys import getsizeof
-from random import sample
-from os.path import splitext, basename
-from aiofiles import open, os
-from secrets import token_urlsafe
+
+from aiofiles import os
+from os.path import basename
 from fastapi import APIRouter, UploadFile, File
 from fastapi.responses import FileResponse
 
 from ..functions.response import send_response
+from ..functions.storage_helper import write_file, FileSizeIsTooLarge
 from ..config.storageConf import NX_Strg
 from ..models.FileServer import UploadModel, DownloadModel, DeleteModel
 
@@ -22,28 +21,15 @@ route = APIRouter()
     response_model=UploadModel,
     tags=["File server"])
 async def upload_file(file: UploadFile = File(...)):
-    async def gen_name():
-        while True:
-            name = "".join([
-                NX_Strg["path_to"],
-                "".join(sample(file.filename, 4)),
-                token_urlsafe(NX_Strg["length"]),
-                splitext(file.filename)[1]])
-            if not await os.path.isfile(name):
-                return name
-
-    fn = await gen_name()
-    async with open(fn, mode="wb") as pp:
-        cnt = await file.read()
-        # Checks file size
-        if getsizeof(cnt) > NX_Strg["limit"]:
-            return await send_response("File is too large!", 413)
-        await pp.write(cnt)
-    xd = {
-        "name": file.filename,
-        "id": basename(fn)
-    }
-    return await send_response(xd)
+    try:
+        fn = await write_file(file)
+        xd = {
+            "name": file.filename,
+            "id": basename(fn)
+        }
+        return await send_response(xd)
+    except FileSizeIsTooLarge:
+        return await send_response("File is too large!", 413)
 
 
 @route.get(

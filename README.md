@@ -13,6 +13,7 @@ Simple API made with [Fastapi](https://fastapi.tiangolo.com/)
 - [`define`](api/routes/define.py) - Get the definition of a word
 - [`translate`](api/routes/translate.py) - Translate text using google translate
 - [`password`](api/routes/password.py) - Generates a random password according to the given length
+- [`color_palette`](api/routes/color_palette.py) - Generate color palettes from images
 - [`storage`](api/routes/storage.py) - Store files on the server [Read more](https://github.com/Itz-fork/Nexa-APIs/wiki/Route:-Storage)
 
 

@@ -1,4 +1,4 @@
-# Copyright (c) 2022 Itz-fork
+# Copyright (c) 2022 - Itz-fork
 
 from glob import glob
 from os import makedirs
