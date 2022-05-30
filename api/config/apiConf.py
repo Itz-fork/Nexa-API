@@ -17,7 +17,7 @@ Visit the API playground [here](/docs)
 [![API Playground](https://img.shields.io/badge/Playground-354259?style=for-the-badge)](/docs)
 [![Github](https://img.shields.io/badge/GitHub-030202?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Itz-fork/Nexa-APIs)
 """,
-    "version": "0.2.9",
+    "version": "0.3",
 
     # Home route
     "home_redirect": True,
