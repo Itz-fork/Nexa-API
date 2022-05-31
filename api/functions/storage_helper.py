@@ -12,7 +12,6 @@ async def gen_name(file):
     while True:
         name = "".join([
             NX_Strg["path_to"],
-            "".join(sample(file.filename, 4)),
             token_urlsafe(NX_Strg["length"]),
             splitext(file.filename)[1]])
         if not isfile(name):

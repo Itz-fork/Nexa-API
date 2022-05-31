@@ -1,7 +1,7 @@
 #! /usr/bin/bash
 
 # Varialbles
-Version="0.2.8"
+Version="0.3.1"
 
 White="\033[1;37m"
 Red="\033[1;31m"

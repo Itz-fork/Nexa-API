@@ -5,7 +5,7 @@ NX_Strg = {
     "path_to": "Downloads/",
 
     # ID length, which will be passed secrets.token_urlsafe function
-    "length": 16,
+    "length": 7,
 
     # Size limit in bytes (Default to 500mb)
     "limit": 524288000,
