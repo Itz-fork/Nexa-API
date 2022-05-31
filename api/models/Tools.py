@@ -29,11 +29,11 @@ class PaletteModel(BaseModel):
                 {
                     "status": "ok",
                     "data": [
-                        {
-                            "r": 40,
-                            "g": 47,
-                            "b": 55
-                        }
+                        [
+                            40,
+                            47,
+                            55
+                        ]
                     ]
                 }
             ]

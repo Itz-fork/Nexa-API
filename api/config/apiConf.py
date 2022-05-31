@@ -17,7 +17,7 @@ Visit the API playground [here](/docs)
 [![API Playground](https://img.shields.io/badge/Playground-354259?style=for-the-badge)](/docs)
 [![Github](https://img.shields.io/badge/GitHub-030202?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Itz-fork/Nexa-APIs)
 """,
-    "version": "0.3",
+    "version": "0.3.1",
 
     # Home route
     "home_redirect": True,
@@ -35,11 +35,15 @@ Visit the API playground [here](/docs)
         },
         {
             "name": "Tools",
-            "description": "Tools for simple things 🗿"
+            "description": "Tools for simple things"
         },
         {
             "name": "Language",
             "description": "Language related stuff"
+        },
+        {
+            "name": "Fun",
+            "description": "Endpoints made to have some fun"
         }
     ]
 }

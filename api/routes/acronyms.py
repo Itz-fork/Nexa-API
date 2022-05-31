@@ -19,4 +19,4 @@ route = APIRouter()
 async def get_acronym(word: str):
     async with open("api/data/acronyms_list.json") as ls:
         acc = loads(await ls.read())
-        return await send_response(acc.get(word))
+        return await send_response(acc.get(word.lower()))

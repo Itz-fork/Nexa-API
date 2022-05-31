@@ -17,11 +17,11 @@ def gen_colors(data):
     final = []
     if data[2] == "hsl":
         for hclr in clrs:
-            hpal = dict(h=hclr.hsl.h, s=hclr.hsl.s, l=hclr.hsl.l)
+            hpal = [hclr.hsl.h, hclr.hsl.s, hclr.hsl.l]
             final.append(hpal)
     else:
         for rclr in clrs:
-            rpal = dict(r=rclr.rgb.r, g=rclr.rgb.g, b=rclr.rgb.b)
+            rpal = [rclr.rgb.r, rclr.rgb.g, rclr.rgb.b]
             final.append(rpal)
     return final
 
@@ -31,7 +31,7 @@ def gen_colors(data):
     description="Generate color palettes from images",
     response_model=PaletteModel,
     tags=["Tools"])
-async def gen_color_palette(limit: int = 2, type_as: str = "rgb", file: UploadFile = File(...)):
+async def generate_color_palette(limit: int = 2, type_as: str = "rgb", file: UploadFile = File(...)):
     # Check if the file is an image or not
     if "image" not in file.content_type:
         return await send_response("File is not an image", 406)
