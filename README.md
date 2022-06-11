@@ -10,6 +10,7 @@ Simple API made with [Fastapi](https://fastapi.tiangolo.com/)
     - [`urban dict`](api/routes/urbandict.py) - Search for definitions in urban dict
     - [`wallpapers`](api/routes/wallpapers.py) - Fetch wallpapers from reddit
     - [`npm search`](api/routes/npm_search.py) - Search for npm packages
+    - [`1337x search`](api/routes/1337x_search.py) - Search for torrents in 1337x
 
 - Language
     - [`acronym`](api/routes/acronyms.py) - Get the meaning of an acronym

@@ -108,3 +108,30 @@ class NpmModel(BaseModel):
                 }
             ]
         }
+
+
+# Route: /1337x
+class X1337Model(BaseModel):
+    q: str
+
+    class Config:
+        schema_extra = {
+            'examples': [
+                {
+                    "status": "ok",
+                    "data": {
+                        "1": {
+                            "name": "Red Dead Redemption 2 (Build 1311.23, MULTi13) [FitGirl Repack]",
+                            "torrentId": "4651924",
+                            "link": "https://www.1377x.to/torrent/4651924/Red-Dead-Redemption-2-Build-1311-23-MULTi13-FitGirl-Repack/",
+                            "seeders": "4034",
+                            "leechers": "8722",
+                            "size": "66.3 GB",
+                            "time": "Oct. 23rd '20",
+                            "uploader": "FitGirl",
+                            "uploaderLink": "https://www.1377x.to/FitGirl/"
+                        }
+                    }
+                }
+            ]
+        }
