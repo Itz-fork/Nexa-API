@@ -5,7 +5,7 @@ from random import choice
 from aiofiles import open
 from fastapi import APIRouter
 
-from ..models.Fun import FactModel
+from ..models.Fun import InsultModel
 from ..functions.response import send_response
 
 
@@ -13,11 +13,11 @@ route = APIRouter()
 
 
 @route.get(
-    "/fact",
-    description="Get a random fact",
-    response_model=FactModel,
+    "/insult",
+    description="Insult somebody ( ✧≖ ͜ʖ≖)",
+    response_model=InsultModel,
     tags=["Fun"])
-async def get_random_fact():
-    async with open("api/data/facts.json") as ls:
+async def insult_em():
+    async with open("api/data/insults_list.json") as ls:
         fcts = loads(await ls.read())
         return await send_response(choice(list(fcts.values())))

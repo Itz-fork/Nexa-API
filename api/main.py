@@ -6,6 +6,7 @@ from os.path import dirname, join, basename, isfile, isdir
 from importlib import import_module, invalidate_caches
 
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 from fastapi.openapi.utils import get_openapi
 from fastapi.openapi.docs import get_swagger_ui_html, get_redoc_html
 
@@ -17,6 +18,9 @@ app = FastAPI(
     docs_url=None,
     redoc_url=None,
     openapi_tags=NX_Conf["tags"])
+
+# Mount static folder
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
 class Start():
@@ -64,11 +68,11 @@ async def over_docs():
                                    "defaultModelsExpandDepth": -1,
                                    "syntaxHighlight.theme": "tomorrow-night"
                                },
-                               swagger_favicon_url="https://github.com/Itz-fork/Nexa-APIs/raw/master/favicon.ico")
+                               swagger_favicon_url="/static/favicon.ico")
 
 
 @app.get("/redoc", include_in_schema=False)
 async def over_redoc():
     return get_redoc_html(openapi_url="/openapi.json",
                           title="Nexa-APIs 🌊 | Redoc",
-                          redoc_favicon_url="https://github.com/Itz-fork/Nexa-APIs/raw/master/favicon.ico")
+                          redoc_favicon_url="/static/favicon.ico")

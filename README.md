@@ -1,10 +1,8 @@
 # Nexa-APIs 🌊
-
 Simple API made with [Fastapi](https://fastapi.tiangolo.com/)
 
 
 # List of endpoints 🎗️
-
 - Search
     - [`reddit`](api/routes/reddit.py) - Search for posts in reddit
     - [`urban dict`](api/routes/urbandict.py) - Search for definitions in urban dict
@@ -26,9 +24,11 @@ Simple API made with [Fastapi](https://fastapi.tiangolo.com/)
 
 - Fun
     - [`fact`](api/routes/facts.py) - Get a random fact
+    - [`insult`](api/routes/insult.py) - Insult somebody ( ✧≖ ͜ʖ≖)
 
 
 # Deploy it! 🚀
+This api is open source, you can deploy your own version easily 🤗
 
 ### Locally 💻,
 ```sh
@@ -43,13 +43,12 @@ bash start.sh
 
 
 # Development 🧑‍💻
-
 Here are somethings to note,
 
 - You can find config files in [`config`](api/config) directory
 - Reusable functions are located in [`functions`](api/functions) directory
 - You can find routes in [`routes`](api/routes) directory
-- Use [`start script`](start.sh) when running the dev server (`bash start.sh`)
+- Use [`start script`](start.sh) when running the dev server (`bash start.sh dev`)
 
 ## Add new routes 👨‍🎨
 - Create a new file in [`routes`](api/routes) directory (Ex: `myRoute.py`)
@@ -70,12 +69,6 @@ bash start.sh dev
 ```
 
 
-# Why? 🤔
-
-> __**Cuz why not? 🎾**__
-
-
 # License & Credits 👮‍♂️ ♥️
-
 - Licensed under [MIT License](LICENSE)
 - Credits to [emoji - aranja](https://emoji.aranja.com/) for the [favicon](favicon.ico)
