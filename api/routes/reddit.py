@@ -14,6 +14,6 @@ route = APIRouter()
     description="Search for posts in reddit",
     response_model=RedditModel,
     tags=["Search"])
-async def reddit_search(q: str, sub: str = None):
-    r = await request(q, sub.split(" ") if sub else [])
+async def reddit_search(q: str, sub: str = None, nsfw: bool = False):
+    r = await request(q, sub.split(" ") if sub else [], nsfw)
     return await send_response(r)

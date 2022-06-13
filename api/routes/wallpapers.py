@@ -15,9 +15,9 @@ route = APIRouter()
     description="Fetch wallpapers from subreddits",
     response_model=WallpaperModel,
     tags=["Search"])
-async def walpapers_search(q: str):
+async def walpapers_search(q: str, nsfw: bool = True):
     walls = []
-    r = await request(q, NX_Basic["subs"])
+    r = await request(q, NX_Basic["subs"], nsfw)
     for i in r:
         if i["image"]:
             walls.append(i["image"])
