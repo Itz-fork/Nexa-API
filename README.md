@@ -1,5 +1,5 @@
 <h1 align="center">
-    Nexa-API 🌊 <br/>
+    Nexa API 🌊 <br/>
     <img src="https://user-images.githubusercontent.com/77770753/173895688-fc1d19e7-bbb1-446f-a3b5-4f417e6f3fc4.png" width="200">
 </h1>
 
@@ -63,7 +63,7 @@ Here are somethings to note,
 
 ## Add new routes 👨‍🎨
 - Create a new file in [`routes`](api/routes) directory (Ex: `myRoute.py`)
-- Add this code (Here we add new route named `/test` which returns the text, `Hello from Fastapi, Nexa-API 🌊`)
+- Add this code (Here we add new route named `/test` which returns the text, `Hello from Fastapi, Nexa API 🌊`)
 ```python
 from fastapi import APIRouter
 from ..functions.response import send_response
@@ -72,7 +72,7 @@ route = APIRouter()
 
 @route.get("/test")
 async def test_route():
-    return await send_response("Hello from Nexa-API 🌊")
+    return await send_response("Hello from Nexa API 🌊")
 ```
 - Start the development server
 ```sh
