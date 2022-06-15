@@ -1,12 +1,15 @@
 {
-    "name": "Nexa-APIs 🌊",
-    "logo": "https://github.com/Itz-fork/Nexa-APIs/raw/master/favicon.ico",
+    "name": "Nexa-API 🌊",
+    "logo": "https://github.com/Itz-fork/Nexa-API/raw/master/favicon.ico",
     "description": "Useless API",
-    "repository": "https://github.com/Itz-fork/Nexa-APIs",
+    "repository": "https://github.com/Itz-fork/Nexa-API",
     "keywords": [
         "fastapi",
         "wallpaper api",
-        "reddit api"
+        "reddit api",
+        "file server",
+        "urban dictionary api",
+        "color palette generator api"
     ],
     "website": "https://t.me/NexaBotsUpdates",
     "success_url": "https://t.me/NexaBotsUpdates",

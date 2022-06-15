@@ -19,5 +19,5 @@ route = APIRouter()
     tags=["Fun"])
 async def insult_em():
     async with open("api/data/insults_list.json") as ls:
-        fcts = loads(await ls.read())
-        return await send_response(choice(list(fcts.values())))
+        inslt = loads(await ls.read())
+        return await send_response(choice(list(inslt.values())))

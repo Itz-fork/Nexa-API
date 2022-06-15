@@ -38,3 +38,20 @@ class PaletteModel(BaseModel):
                 }
             ]
         }
+
+
+# Route: /currency
+class CurrencyModel(BaseModel):
+    origin: str
+    to: str
+    amount: int | float
+
+    class Config:
+        schema_extra = {
+            'examples': [
+                {
+                    "status": "ok",
+                    "data": "360.015343 LKR"
+                }
+            ]
+        }

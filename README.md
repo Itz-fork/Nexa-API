@@ -1,5 +1,5 @@
-# Nexa-APIs 🌊
-Simple API made with [Fastapi](https://fastapi.tiangolo.com/)
+# Nexa-API 🌊
+Simple, Free and easy to use Public api built with [Fastapi](https://fastapi.tiangolo.com/)
 
 
 # List of endpoints 🎗️
@@ -18,9 +18,10 @@ Simple API made with [Fastapi](https://fastapi.tiangolo.com/)
 - Tools
     - [`password`](api/routes/password.py) - Generates a random password according to the given length
     - [`color_palette`](api/routes/color_palette.py) - Generate color palettes from images
+    - [`currency`](api/routes/currency_cov.py) - Exchange rate from 'x' to 'y'. Data is **scraped** from [x-rates](https://www.x-rates.com/)
 
 - File server
-    - [`storage`](api/routes/storage.py) - Store files on the server [Read more](https://github.com/Itz-fork/Nexa-APIs/wiki/Route:-Storage)
+    - [`storage`](api/routes/storage.py) - Store files on the server [Read more](https://github.com/Itz-fork/Nexa-API/wiki/Route:-Storage)
 
 - Fun
     - [`fact`](api/routes/facts.py) - Get a random fact
@@ -32,14 +33,14 @@ This api is open source, you can deploy your own version easily 🤗
 
 ### Locally 💻,
 ```sh
-git clone https://github.com/Itz-fork/Nexa-APIs
-cd Nexa-APIs
+git clone https://github.com/Itz-fork/Nexa-API
+cd Nexa-API
 pip3 install -r requirements.txt
 bash start.sh
 ```
 
 ### Heroku ☁️
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Itz-fork/Nexa-APIs)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Itz-fork/Nexa-API)
 
 
 # Development 🧑‍💻
@@ -52,7 +53,7 @@ Here are somethings to note,
 
 ## Add new routes 👨‍🎨
 - Create a new file in [`routes`](api/routes) directory (Ex: `myRoute.py`)
-- Add this code (Here we add new route named `/test` which returns the text, `Hello from Fastapi, Nexa-APIs 🌊`)
+- Add this code (Here we add new route named `/test` which returns the text, `Hello from Fastapi, Nexa-API 🌊`)
 ```python
 from fastapi import APIRouter
 from ..functions.response import send_response
@@ -61,7 +62,7 @@ route = APIRouter()
 
 @route.get("/test")
 async def test_route():
-    return await send_response("Hello from Nexa-APIs 🌊")
+    return await send_response("Hello from Nexa-API 🌊")
 ```
 - Start the development server
 ```sh

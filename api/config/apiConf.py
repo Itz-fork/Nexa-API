@@ -1,11 +1,14 @@
 # Nexa API configuration
 NX_Conf = {
     # Metadata for api
-    "title": "Nexa-APIs 🌊",
+    "title": "Nexa-API 🌊",
     "description": """
 # About ❓
 Simple, Free and easy to use Public api.
-Visit the API playground [here](/docs)
+
+- [Homepage](/)
+- [API playground](/playground)
+- [Documentation](/docs)
 
 
 ### Made with ♥️
@@ -13,14 +16,14 @@ Visit the API playground [here](/docs)
 [![FastAPI](https://img.shields.io/badge/FastAPI-009485?style=for-the-badge&logo=fastapi&logoColor=white)](https://github.com/tiangolo/fastapi)
 
 ### Links 🔗
-[![API Docs](https://img.shields.io/badge/Docs-112B3C?style=for-the-badge&logo=gitbook&logoColor=white)](/redoc)
-[![API Playground](https://img.shields.io/badge/Playground-354259?style=for-the-badge)](/docs)
-[![Github](https://img.shields.io/badge/GitHub-030202?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Itz-fork/Nexa-APIs)
+[![API Docs](https://img.shields.io/badge/Docs-112B3C?style=for-the-badge&logo=gitbook&logoColor=white)](/docs)
+[![API Playground](https://img.shields.io/badge/Playground-354259?style=for-the-badge)](/playground)
+[![Github](https://img.shields.io/badge/GitHub-030202?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Itz-fork/Nexa-API)
 """,
-    "version": "0.3.2",
+    "version": "0.3.3",
 
     # Home route
-    "home_redirect": True,
+    "home_redirect": False,
     "redirect_to": "/docs",
 
     # Metadata for tags

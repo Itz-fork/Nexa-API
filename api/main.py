@@ -60,10 +60,10 @@ Start()
 
 
 # Override default docs and redoc urls
-@app.get("/docs", include_in_schema=False)
+@app.get("/playground", include_in_schema=False)
 async def over_docs():
     return get_swagger_ui_html(openapi_url="/openapi.json",
-                               title="Nexa-APIs 🌊 | Swagger",
+                               title="Nexa-API 🌊 Playground",
                                swagger_ui_parameters={
                                    "defaultModelsExpandDepth": -1,
                                    "syntaxHighlight.theme": "tomorrow-night"
@@ -71,8 +71,8 @@ async def over_docs():
                                swagger_favicon_url="/static/favicon.ico")
 
 
-@app.get("/redoc", include_in_schema=False)
+@app.get("/docs", include_in_schema=False)
 async def over_redoc():
     return get_redoc_html(openapi_url="/openapi.json",
-                          title="Nexa-APIs 🌊 | Redoc",
+                          title="Nexa-API 🌊 Documentation",
                           redoc_favicon_url="/static/favicon.ico")
