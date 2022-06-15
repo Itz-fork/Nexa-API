@@ -82,4 +82,4 @@ bash start.sh dev
 
 # License & Credits 👮‍♂️ ♥️
 - Licensed under [MIT License](LICENSE)
-- Credits to [emoji - aranja](https://emoji.aranja.com/) for the [favicon](favicon.ico)
+- Color scheme by [catppuccin](https://github.com/catppuccin/catppuccin)
