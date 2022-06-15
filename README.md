@@ -1,5 +1,15 @@
-# Nexa-API 🌊
-Simple, Free and easy to use Public api built with [Fastapi](https://fastapi.tiangolo.com/)
+<h1 align="center">
+    Nexa-API 🌊 <br/>
+    <img src="https://user-images.githubusercontent.com/77770753/173895688-fc1d19e7-bbb1-446f-a3b5-4f417e6f3fc4.png" width="200">
+</h1>
+
+<p align="center">
+    <b>Simple</b>, <b>Free</b> and <b>Easy to use</b> Public api </br></br>
+    <kbd> <br> <a href="#list-of-endpoints-%EF%B8%8F">Endpoints</a> <br> </kbd>
+    <kbd> <br> <a href="#deploy-it-">Deployment</a> <br> </kbd>
+    <kbd> <br> <a href="#development-">Development</a> <br> </kbd>
+</p>
+
 
 
 # List of endpoints 🎗️

@@ -23,5 +23,4 @@ def scrape_it(resp):
 async def currency_converter(origin: str, to: str, amount: int | float):
     r = await fetch(f"https://www.x-rates.com/calculator/?from={origin.upper()}&to={to.upper()}&amount={amount}", False)
     s = await run_async(scrape_it, r)
-    print(s)
     return await send_response(s)

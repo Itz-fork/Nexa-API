@@ -63,7 +63,7 @@ Start()
 @app.get("/playground", include_in_schema=False)
 async def over_docs():
     return get_swagger_ui_html(openapi_url="/openapi.json",
-                               title="Nexa-API 🌊 Playground",
+                               title="Nexa API 🌊 Playground",
                                swagger_ui_parameters={
                                    "defaultModelsExpandDepth": -1,
                                    "syntaxHighlight.theme": "tomorrow-night"
@@ -74,5 +74,5 @@ async def over_docs():
 @app.get("/docs", include_in_schema=False)
 async def over_redoc():
     return get_redoc_html(openapi_url="/openapi.json",
-                          title="Nexa-API 🌊 Documentation",
+                          title="Nexa API 🌊 Documentation",
                           redoc_favicon_url="/static/favicon.ico")

@@ -38,7 +38,7 @@ function main() {
     isDev=false
     if [ "$1" == dev ] ; then
         isDev=true
-        echo -e "$White Nexa-API 🌊 - Dev Mode ($Version) $Reset\n\n "
+        echo -e "$White Nexa API 🌊 - Dev Mode ($Version) $Reset\n\n "
         case "$2" in
             -u|--update)
                 pip3 install -U -r requirements.txt; shift ;;
@@ -48,7 +48,7 @@ function main() {
             error "$2"
         esac
     else
-        echo -e "$White Nexa-API 🌊 - $Version $Reset\n\n "
+        echo -e "$White Nexa API 🌊 - $Version $Reset\n\n "
     fi
 
     prs "Checking Dependencies 🔎..."
