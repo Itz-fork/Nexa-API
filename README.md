@@ -83,3 +83,4 @@ bash start.sh dev
 # License & Credits 👮‍♂️ ♥️
 - Licensed under [MIT License](LICENSE)
 - Color scheme by [catppuccin](https://github.com/catppuccin/catppuccin)
+- Swagger UI Dark theme by [Itz-fork](https://github.com/Itz-fork/Fastapi-Swagger-UI-Dark)
