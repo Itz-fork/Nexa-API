@@ -68,7 +68,8 @@ async def over_docs():
                                    "defaultModelsExpandDepth": -1,
                                    "syntaxHighlight.theme": "tomorrow-night"
                                },
-                               swagger_favicon_url="/static/favicon.ico")
+                               swagger_favicon_url="/static/favicon.ico",
+                               swagger_css_url="https://cdn.jsdelivr.net/gh/Itz-fork/Fastapi-Swagger-UI-Dark/swagger_ui_dark.css")
 
 
 @app.get("/docs", include_in_schema=False)
