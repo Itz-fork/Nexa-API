@@ -12,18 +12,13 @@ from ..functions.storage_helper import write_file, FileSizeIsTooLarge
 route = APIRouter()
 
 
-def gen_colors(data):
-    clrs = extract(data[0], data[1])
-    final = []
-    if data[2] == "hsl":
-        for hclr in clrs:
-            hpal = [hclr.hsl.h, hclr.hsl.s, hclr.hsl.l]
-            final.append(hpal)
+def gen_colors(fn, limit, type_as):
+    rdata = extract(fn, limit)
+    if type_as == "hsl":
+        colors = [[hclr.hsl.h, hclr.hsl.s, hclr.hsl.l] for hclr in rdata]
     else:
-        for rclr in clrs:
-            rpal = [rclr.rgb.r, rclr.rgb.g, rclr.rgb.b]
-            final.append(rpal)
-    return final
+        colors = [[rclr.rgb.r, rclr.rgb.g, rclr.rgb.b] for rclr in rdata]
+    return colors
 
 
 @route.post(

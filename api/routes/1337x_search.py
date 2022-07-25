@@ -12,12 +12,8 @@ route = APIRouter()
 
 
 def get_1337x(q):
-    trnts = py1337x().search(q[0])
-    res = {}
-    no = 1
-    for itm in trnts["items"]:
-        res[no] = itm
-        no += 1
+    trnts = py1337x().search(q)
+    res = {num: itm for num, itm in enumerate(trnts["items"])}
     return res
 
 

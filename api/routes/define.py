@@ -13,10 +13,10 @@ route = APIRouter()
 
 def define(word):
     dic = PyDictionary()
-    mn = dic.meaning(word[0])
+    mn = dic.meaning(word)
     result = {}
-    if type(mn) is dict:
-        # Iterate through key value pairs of the dict (not dick)
+    if isinstance(mn, dict):
+        # Iterate through key value pairs of the dict (definitely not dick)
         for k, v in mn.items():
             result["type"] = k
             result["definition"] = v

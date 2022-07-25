@@ -10,7 +10,7 @@ route = APIRouter()
 
 
 def scrape_it(resp):
-    soup = BeautifulSoup(resp[0].text, "html.parser")
+    soup = BeautifulSoup(resp.text, "html.parser")
     rs = soup.find("span", attrs={"class": "ccOutputRslt"})
     return rs.text
 
