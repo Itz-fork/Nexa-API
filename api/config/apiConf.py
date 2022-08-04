@@ -9,6 +9,7 @@ Simple, Free and easy to use Public api.
 - [Homepage](/)
 - [API playground](/playground)
 - [Documentation](/docs)
+- [API Wrappers](https://github.com/Itz-fork/Nexa-API/tree/main/wrappers)
 
 
 ### Made with ♥️
@@ -19,7 +20,7 @@ Simple, Free and easy to use Public api.
 [![Github](https://img.shields.io/badge/Github-302D41?style=for-the-badge&logo=github&color=A6DA95&logoColor=D9E0EE&labelColor=302D41)](https://github.com/Itz-fork/Nexa-API)
 [![Telegram](https://img.shields.io/badge/Telegram-302D41?style=for-the-badge&logo=telegram&color=B4BEFE&logoColor=D9E0EE&labelColor=302D41)](https://t.me/NexaBotsUpdates)
 """,
-    "version": "0.3.3",
+    "version": "0.3.4",
 
     # Home route
     "home_redirect": False,

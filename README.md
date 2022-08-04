@@ -56,6 +56,7 @@ bash start.sh
 # Development 🧑‍💻
 Here are somethings to note,
 
+- You can find api wrappers in [`wrappers`](wrappers) directory 
 - You can find config files in [`config`](api/config) directory
 - Reusable functions are located in [`functions`](api/functions) directory
 - You can find routes in [`routes`](api/routes) directory
